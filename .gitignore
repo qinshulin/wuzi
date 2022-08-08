@@ -1,2 +1,3 @@
 log/*.txt
-yolo/weight/*
+yolo/weight/*.pt
+
