@@ -1,0 +1,32 @@
+#需要的依赖包：
+
+matplotlib>=3.2.2
+numpy>=1.18.5
+opencv-python>=4.1.2
+Pillow>=7.1.2
+PyYAML>=5.3.1
+requests>=2.23.0
+scipy>=1.4.1
+torch>=1.7.0
+torchvision>=0.8.1
+tqdm>=4.41.0
+pathlib>=2.3.5
+logging>=0.5.1.2
+flask>=1.1.2
+json>=2.0.9
+seaborn>=0.11.1
+
+#windows环境先安装anaconda，在Anaconda Prompt 命令窗口执行pip install -r requirements.txt 安装上述依赖包，使用anaconda自带的python解释器即可 
+#linux系统可以先安装pip=>22.1.2 , 然后  pip install -r requirements.txt    安装上述依赖包，包括python> =3.7版本
+#如果遇到网络问题，安装缓慢，可替换安装源       pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple 
+
+#项目文件启动文件是main.py    ， 可在命令行启动，  比如  python  mian.py  --conf=0.25  (可带其它参数，一般不需要修改，使用默认参数即可)
+# --conf 检测污渍的得分阈值，--imgsz 模型使用的图片大小，可根据情况适当放大，其他参数略
+#服务默认启动在8888端口， 比如本地地址是10.0.97.95， 则发送 post请求到  http://10.0.97.95:8888/Detect_wuzi ， param={"wuzi" :ls_f} ， ls_f是base64格式的图片
+#返回参数是json字符串，字典格式，包括一下几种：
+#{'status': "003", "message": "base64为空", "data":None}    base64格式图片为空
+#{'status': "002", "message": "no wuzi",  "data":None}       没有污渍
+#{'status': "004", "message": "系统出错", "data":None}    服务内部出现错误
+#{'status': "001", "message":"成功", "data":data}     data参照设定标准
+
+#CPU i7 单次识别5s内，GPU P40 0.5s内
