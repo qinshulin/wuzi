@@ -30,3 +30,4 @@ seaborn>=0.11.1
 #{'status': "001", "message":"成功", "data":data}     data参照设定标准
 
 #CPU i7 单次识别5s内，GPU P40 0.5s内  
+#
