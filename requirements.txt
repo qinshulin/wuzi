@@ -29,4 +29,4 @@ seaborn>=0.11.1
 #{'status': "004", "message": "系统出错", "data":None}    服务内部出现错误
 #{'status': "001", "message":"成功", "data":data}     data参照设定标准
 
-#CPU i7 单次识别5s内，GPU P40 0.5s内  ##
+#CPU i7 单次识别5s内，GPU P40 0.5s内  
